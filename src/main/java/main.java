@@ -19,7 +19,7 @@ public class main {
             //paso 8 - comer con error de +5 puntos //paso 9 - corregiod a +3
             else if (opcion == 2) {
                 if (saciedad < 10) {
-                    saciedad = saciedad + 3; // Error intencionado: sumamos 5 en lugar de 3
+                    saciedad = saciedad + 4; // Error intencionado: sumamos 5 en lugar de 3
 
                     // Aseguramos que no pase de 10
                     if (saciedad > 10) saciedad = 10;
@@ -37,8 +37,8 @@ public class main {
                     diversion = diversion + 3;
                     if (diversion > 10) diversion = 10;
 
-                    saciedad = saciedad - 1; // Jugar da hambre
-                    energia = energia - 1;   // Jugar cansa
+                    saciedad = saciedad - 2; // Jugar da hambre
+                    energia = energia - 2;   // Jugar cansa
 
                     System.out.println("¡A jugar! El Tamagotchi se divierte.");
                     mostrarEstado();
