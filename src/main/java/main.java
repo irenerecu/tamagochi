@@ -15,6 +15,20 @@ public class main {
             if (opcion == 1) {
                 mostrarEstado();
             }
+            //paso 8 - comer con error de +5 puntos
+            else if (opcion == 2) {
+                if (saciedad < 10) {
+                    saciedad = saciedad + 5; // Error intencionado: sumamos 5 en lugar de 3
+
+                    // Aseguramos que no pase de 10
+                    if (saciedad > 10) saciedad = 10; [cite: 109]
+
+                    diversion = diversion - 1; // [cite: 109]
+                    System.out.println("Has alimentado al Tamagotchi.");
+                } else {
+                    System.out.println("No tengo hambre"); [cite: 108]
+                }
+            }
         } while (opcion != 0);
         System.out.println("¡Adiós!");
     }
