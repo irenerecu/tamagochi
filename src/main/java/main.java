@@ -45,6 +45,19 @@ public class main {
                     System.out.println("Ahora no me apetece jugar.");
                 }
             }
+            // [Paso 11] Opción 4: Dormir
+            else if (opcion == 4) {
+                if (energia < 10) {
+                    energia += 3; // Incremento de 3
+                    if (energia > 10) energia = 10;
+                    saciedad -= 3; // Disminuye saciedad en 3
+                    diversion -= 2; // Disminuye diversión en 2
+                    System.out.println("Zzz... El Tamagotchi está durmiendo.");
+                    mostrarEstado(); [cite: 133]
+                } else {
+                    System.out.println("No tengo sueño ahora mismo");
+                }
+            }
 
         } while (opcion != 0);
         System.out.println("¡Adiós!");
@@ -54,10 +67,10 @@ public class main {
             System.out.println("\n--- ESTADO DEL TAMAGOTCHI ---");
             System.out.println("Saciedad: " + saciedad + " | Energía: " + energia + " | Diversión: " + diversion);
 
-            if (saciedad <= 0 || energia <= 0 || diversion <= 0) { // Fin del juego [cite: 39, 91]
+            if (saciedad <= 0 || energia <= 0 || diversion <= 0) { // Fin del juego
                 System.out.println("(x_x): (Game Over )");
                 System.out.println("/I_I\\");
-            } else if (diversion <= 4) { // Triste [cite: 26, 88]
+            } else if (diversion <= 4) { // Triste
                 System.out.println("(-,-) Estoy aburrido / ¡Juega conmigo!");
             } else if (energia <= 4) { // Cansado [cite: 32, 89]
                 System.out.println("(-_-) Zzz");
@@ -68,11 +81,11 @@ public class main {
                 System.out.println("(^.^) ¡Estoy feliz!");
             }
         }
-    private static int menuPrincipal() { // [cite: 69, 70]
+    private static int menuPrincipal() {
         Scanner teclado = new Scanner(System.in);
         int opcion = -1;
 
-        // Bucle para validar que la opción sea correcta (0-4) [cite: 73]
+        // Bucle para validar que la opción sea correcta (0-4)
         while (opcion < 0 || opcion > 4) {
             System.out.println("\n--- MENÚ PRINCIPAL ---");
             System.out.println("1. Estado");
