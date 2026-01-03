@@ -18,7 +18,7 @@ public class main {
             //paso 8 - comer con error de +5 puntos
             else if (opcion == 2) {
                 if (saciedad < 10) {
-                    saciedad = saciedad + 3; // Error intencionado: sumamos 5 en lugar de 3 [cite: 109, 113]
+                    saciedad = saciedad + 3; // Error intencionado: sumamos 5 en lugar de 3
 
                     // Aseguramos que no pase de 10
                     if (saciedad > 10) saciedad = 10;
@@ -27,7 +27,22 @@ public class main {
                     System.out.println("Has alimentado al Tamagotchi.");
                     mostrarEstado(); // AÑADIDO
                 } else {
-                    System.out.println("No tengo hambre"); [cite: 108]
+                    System.out.println("No tengo hambre");
+                }
+            }
+            //paso 10
+            else if (opcion == 3) {
+                if (diversion < 10) {
+                    diversion = diversion + 3;
+                    if (diversion > 10) diversion = 10;
+
+                    saciedad = saciedad - 1; // Jugar da hambre
+                    energia = energia - 1;   // Jugar cansa
+
+                    System.out.println("¡A jugar! El Tamagotchi se divierte.");
+                    mostrarEstado();
+                } else {
+                    System.out.println("Ahora no me apetece jugar.");
                 }
             }
 
