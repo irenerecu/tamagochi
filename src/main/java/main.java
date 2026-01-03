@@ -7,6 +7,7 @@ public class main {
         static int saciedad = 6;
         static int energia = 6;
         static int diversion = 6;
+        static int higiene = 6;
 
         public static void main(String[] args) {
         int opcion;
@@ -59,6 +60,16 @@ public class main {
                     System.out.println("No tengo sueño ahora mismo");
                 }
             }
+            else if (opcion == 5) {
+                if (higiene < 10) {
+                    higiene = 10; // Queda totalmente limpio
+                    energia -= 1; // Bañarse cansa un poco
+                    System.out.println("¡Burbujas! El Tamagotchi está reluciente.");
+                    mostrarEstado();
+                } else {
+                    System.out.println("Ya está limpio, no quiere mojarse.");
+                }
+            }
 
         } while (opcion != 0);
         System.out.println("¡Adiós!");
@@ -66,7 +77,7 @@ public class main {
         // Metodo para mostrar el sprite según el estado
         private static void mostrarEstado() {
             System.out.println("\n--- ESTADO DEL TAMAGOTCHI ---");
-            System.out.println("Saciedad: " + saciedad + " | Energía: " + energia + " | Diversión: " + diversion);
+            System.out.println("Saciedad: " + saciedad + " | Energía: " + energia + " | Diversión: " + diversion + " | Higiene: " + higiene);
 
             if (saciedad <= 0 || energia <= 0 || diversion <= 0) { // Fin del juego
                 System.out.println("(x_x): (Game Over )");
@@ -87,14 +98,15 @@ public class main {
         int opcion = -1;
 
         // Bucle para validar que la opción sea correcta (0-4)
-        while (opcion < 0 || opcion > 4) {
+        while (opcion < 0 || opcion > 5) {
             System.out.println("\n--- MENÚ PRINCIPAL ---");
             System.out.println("1. Estado");
             System.out.println("2. Comer");
             System.out.println("3. Jugar");
             System.out.println("4. Dormir");
+            System.out.println("5. Bañar");
             System.out.println("0. Salir");
-            System.out.print("Seleccione una opción: "); // [cite: 80]
+            System.out.print("Seleccione una opción: ");
 
             if (teclado.hasNextInt()) {
                 opcion = teclado.nextInt();
