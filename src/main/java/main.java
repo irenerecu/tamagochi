@@ -18,13 +18,14 @@ public class main {
             //paso 8 - comer con error de +5 puntos
             else if (opcion == 2) {
                 if (saciedad < 10) {
-                    saciedad = saciedad + 5; // Error intencionado: sumamos 5 en lugar de 3 [cite: 109, 113]
+                    saciedad = saciedad + 3; // Error intencionado: sumamos 5 en lugar de 3 [cite: 109, 113]
 
                     // Aseguramos que no pase de 10
-                    if (saciedad > 10) saciedad = 10; [cite: 109]
+                    if (saciedad > 10) saciedad = 10;
 
-                    diversion = diversion - 1; // [cite: 109]
+                    diversion = diversion - 1;
                     System.out.println("Has alimentado al Tamagotchi.");
+                    mostrarEstado(); // AÑADIDO
                 } else {
                     System.out.println("No tengo hambre"); [cite: 108]
                 }
