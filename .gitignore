@@ -1,0 +1,12 @@
+# Directorios de compilación y Gradle
+.gradle/
+build/
+
+# Configuración de IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
