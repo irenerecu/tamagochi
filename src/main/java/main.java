@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class main {
 
         //Variables inicializadas a 6
+        static int saciedad = 6;
         static int energia = 6;
         static int diversion = 6;
 
@@ -15,7 +16,7 @@ public class main {
             if (opcion == 1) {
                 mostrarEstado();
             }
-            //paso 8 - comer con error de +5 puntos
+            //paso 8 - comer con error de +5 puntos //paso 9 - corregiod a +3
             else if (opcion == 2) {
                 if (saciedad < 10) {
                     saciedad = saciedad + 3; // Error intencionado: sumamos 5 en lugar de 3
@@ -53,7 +54,7 @@ public class main {
                     saciedad -= 3; // Disminuye saciedad en 3
                     diversion -= 2; // Disminuye diversión en 2
                     System.out.println("Zzz... El Tamagotchi está durmiendo.");
-                    mostrarEstado(); [cite: 133]
+                    mostrarEstado();
                 } else {
                     System.out.println("No tengo sueño ahora mismo");
                 }
